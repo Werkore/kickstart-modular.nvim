@@ -37,6 +37,12 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
+-- Open Netrw
+vim.keymap.set('n', '<leader>e', ':Explore<CR>', { desc = 'Open Netrw' })
+
+-- run build script
+vim.keymap.set('n', '<leader>m', ':make<CR>', { desc = 'Run build script to compile' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 

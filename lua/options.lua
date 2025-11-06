@@ -26,8 +26,23 @@ end)
 -- Enable break indent
 vim.o.breakindent = true
 
+-- Enable line wrapping
+vim.o.wrap = true
+
+-- Line wrap limit
+vim.o.textwidth = 80
+
 -- Save undo history
 vim.o.undofile = true
+
+-- Smart indent
+vim.o.smartindent = true
+
+-- Auto indent
+vim.o.autoindent = true
+
+-- 4 space tabs
+vim.o.shiftwidth = 4
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
@@ -45,6 +60,9 @@ vim.o.timeoutlen = 300
 -- Configure how new splits should be opened
 vim.o.splitright = true
 vim.o.splitbelow = true
+
+-- Autocommand to find build.sh or build.bat and make it the makepkg
+vim.api.nvim_create_augroup('project_build_settings', { clear = true })
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
