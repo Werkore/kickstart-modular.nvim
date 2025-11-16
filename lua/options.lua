@@ -23,6 +23,10 @@ vim.schedule(function()
   vim.o.clipboard = 'unnamedplus'
 end)
 
+-- Set exrc
+vim.o.exrc = true
+vim.o.secure = true
+
 -- Enable break indent
 vim.o.breakindent = true
 
@@ -42,7 +46,7 @@ vim.o.smartindent = true
 vim.o.autoindent = true
 
 -- 4 space tabs
-vim.o.shiftwidth = 4
+vim.o.shiftwidth = 2
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
@@ -61,8 +65,6 @@ vim.o.timeoutlen = 300
 vim.o.splitright = true
 vim.o.splitbelow = true
 
--- Autocommand to find build.sh or build.bat and make it the makepkg
-vim.api.nvim_create_augroup('project_build_settings', { clear = true })
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
